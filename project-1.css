@@ -1,0 +1,119 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("pngtree-classy-luxury-casino-game-background-image_774371.jpg");
+    color: rgb(180, 120, 8);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+}
+
+.header {
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    padding: 2vh;
+    background-image: linear-gradient(
+        to right,
+        #846501 0%,
+        #d69729 33%,
+        #c5992c 67%,
+        #846501 100%
+    );
+    border: solid 3px black;
+    color: darkcyan;
+}
+button {
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(119, 56, 0, 0.9);
+    color: rgb(209, 244, 244);
+    transition-property: all;
+    transition-duration: .5s;
+    
+}
+
+button:hover {
+    background-color: #c5992c;
+    border: solid 2px #947719;
+}
+.section1 {
+    text-align: center;
+    line-height: 30px;
+    margin-top: 7vh;
+    width: 100vw;
+}
+
+.rules {
+    text-align: left;
+    margin: 1vh 3vw;
+    color: rgb(244, 255, 29);
+    opacity: .7;
+    background-color: black;
+    width: 50vw;
+}
+
+.summary1 {
+    margin: 8px 18px;
+    color: rgb(255, 4, 4);
+}
+
+a:link {
+    color: rgb(52, 45, 3);
+}
+
+.footer {
+    position: absolute;
+    background-image: linear-gradient(
+        to right,
+        #8466019e 0%,
+        #d69729ad 33%,
+        #c59a2cae 67%,
+        #846601be 100% 
+    );
+    width: 100vw;
+    height: 10vh;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    border: solid 2px rgba(50, 44, 12, 0.508);
+}
+
+#result {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #bdbdbd; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #696968; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #727272; 
+  }
