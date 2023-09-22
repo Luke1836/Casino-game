@@ -1,6 +1,7 @@
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -11,13 +12,14 @@ body {
     font-weight: 600;
     font-size: 16px;
     position: relative;
+    width: 100%;
 }
 
 .header {
-    width: 100vw;
     height: 10vh;
-    text-align: center;
-    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: linear-gradient(
         to right,
         #846501 0%,
@@ -25,9 +27,10 @@ body {
         #c5992c 67%,
         #846501 100%
     );
-    border: solid 3px black;
+    border-bottom: solid 4px rgb(64, 48, 31);
     color: darkcyan;
 }
+
 button {
     font-weight: bold;
     color: white;
@@ -53,16 +56,18 @@ button:hover {
     text-align: center;
     line-height: 30px;
     margin-top: 7vh;
-    width: 100vw;
+    width: 100%;
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.441);
 }
 
 .rules {
     text-align: left;
-    margin: 1vh 3vw;
+    margin-left: 4rem;
     color: rgb(244, 255, 29);
-    opacity: .7;
-    background-color: black;
-    width: 50vw;
+    width: 50%;
 }
 
 .summary1 {
@@ -83,7 +88,9 @@ a:link {
         #c59a2cae 67%,
         #846601be 100% 
     );
-    width: 100vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
     height: 10vh;
     bottom: 0;
     display: flex;
@@ -97,6 +104,7 @@ a:link {
 #result {
     font-weight: 600;
     font-size: 20px;
+    color: rgb(253, 200, 65)
 }
 
 ::-webkit-scrollbar {
