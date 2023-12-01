@@ -9,6 +9,13 @@ const rules = document.querySelector('.rules');
 const sec = document.querySelector('.section1');
 const cardBody = document.querySelector('.card');
 let arr= [];
+const close = document.querySelector('.close');
+
+close.addEventListener('click', ()=> {
+    cardBody.classList.toggle('inactive');
+    sec.classList.toggle('active');
+});
+
 b1.addEventListener('click', ()=> {
     rules.classList.toggle('inactive');
     sec.classList.toggle('active');
@@ -29,7 +36,6 @@ function newTake()
         arr.push(secondCard);
         sec.classList.toggle('active');
         cardBody.classList.toggle('inactive');
-        arr.push(firstCard, secondCard);
         return arr;
     });
     

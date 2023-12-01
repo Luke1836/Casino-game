@@ -72,6 +72,7 @@ button:hover {
     border-bottom-left-radius: 45px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    position: relative;
 }
 .card input {
     width: 35vw;
@@ -101,6 +102,15 @@ button:hover {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     background: white;
+}
+
+.close {
+    position: absolute;
+    right: 26px;
+    top: 14px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
 }
 /* End of Utility classes */
 
