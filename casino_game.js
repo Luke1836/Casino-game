@@ -5,6 +5,8 @@ const sumElement = document.getElementById("sum");
 var firstCard;
 var secondCard, sum, choice;
 const b1 = document.querySelector('.btn-1');
+const rules = document.querySelector('.rules');
+const
 
 b1.addEventListener('click', ()=> {
 
