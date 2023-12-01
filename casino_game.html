@@ -40,22 +40,23 @@
                 </details>
             </article>
             <article class="section1 active">
-                <button id="play" onclick="newTake()">Let's Play</button>
-                <p id="operators"><em>Numbers: </em></p>
-                <p id="sum"><strong>SUM: </strong></p>
-                <p id="result"><strong>Result: </strong></p>
+                <p id="operators" class="operators active">Numbers: </p>
+                <p id="sum" class="sum inactive">SUM: </p>
+                <p id="result" class="result inactive">Result: </p>
                 <div class="operands">
-                    <button id="play1" onclick="game()">Roll it!</button><br>
-                    <button id="random" onclick="randomNumber()">Generate Numbers</button><br>
+                    <button id="play" onclick="newTake()">Let's Play</button>
+                    <button id="play1" onclick="game()">Roll it!</button>
+                    <button id="random" onclick="randomNumber()">Generate Numbers</button>
                     <button id="reset" onclick="reset()">RESET</button>
+                </div>
+               
             </article>
         </div>
-        <script src="casino_game.js"></script>
-
         <footer class="footer">
-            <em><strong>Luke's Gaming Productions</strong></em><br>
-            <h3><a href="#">Contact us</a></h3>
+            <p>Luke's Gaming productions</p>
+            <a href="#">Contact Us</a>
         </footer>
+        <script src="casino_game.js"></script>       
     </div>
     </body>
 </html>
