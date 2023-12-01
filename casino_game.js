@@ -7,20 +7,39 @@ var secondCard, sum, choice;
 const b1 = document.querySelector('.btn-1');
 const rules = document.querySelector('.rules');
 const sec = document.querySelector('.section1');
-
+const cardBody = document.querySelector('.card');
+let arr= [];
 b1.addEventListener('click', ()=> {
     rules.classList.toggle('inactive');
     sec.classList.toggle('active');
 });
 
+
 function newTake()
 {
-    firstCard = Number(prompt("Enter a number between 1-10 (1 - Ace)"));
-    secondCard = Number(prompt("Enter a number between 1-10(1 - Ace)"));
+    sec.classList.toggle('active');
+    cardBody.classList.toggle('inactive');
+    const saveBtn = document.getElementById('save-btn');
+    saveBtn.addEventListener('click', ()=> {
+        console.log("Hello");
+        firstCard = document.getElementById('number1').value;
+        secondCard = document.getElementById('number2').value;
+        console.log(firstCard + "    " + secondCard);
+        arr.push(firstCard);
+        arr.push(secondCard);
+        sec.classList.toggle('active');
+        cardBody.classList.toggle('inactive');
+        arr.push(firstCard, secondCard);
+        return arr;
+    });
+    
+    firstCard = arr[0];
+    secondCard = arr[1];
+    console.log(firstCard + "    " + secondCard);
     if(firstCard > 10 || secondCard > 10)
     {
         card.textContent = "Cards are not valid.";
-        alert("Card drawn is not a valid one. Therefore you are disqualified!");
+        
         exit(0);
     }
     if(firstCard === 1)

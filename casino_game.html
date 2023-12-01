@@ -8,6 +8,7 @@
     </head>
     
     <body>
+        
         <header class="header">
             <h1>Casino Royale</h1>
         </header>
@@ -39,6 +40,14 @@
                     </p>
                 </details>
             </article>
+                <!-- Modal -->
+                <div class="card inactive">
+                    <div class="hero-2">
+                        <input type="text" placeholder="Enter the first number" class="numbers" id="number1">
+                        <input type="text" placeholder="Enter the second number" class="numbers" id="number2">
+                        <button class="save-btn" id="save-btn">Save</button>
+                    </div>
+                </div>
             <article class="section1 active">
                 <p id="operators" class="operators active">Numbers: </p>
                 <p id="sum" class="sum inactive">SUM: </p>
@@ -49,14 +58,14 @@
                     <button id="random" onclick="randomNumber()">Generate Numbers</button>
                     <button id="reset" onclick="reset()">RESET</button>
                 </div>
-               
             </article>
         </div>
         <footer class="footer">
             <p>Luke's Gaming productions</p>
             <a href="#">Contact Us</a>
         </footer>
-        <script src="casino_game.js"></script>       
+        <script src="casino_game.js"></script>
+        <script src="https://kit.fontawesome.com/9d964782e2.js" crossorigin="anonymous"></script>      
     </div>
     </body>
 </html>
