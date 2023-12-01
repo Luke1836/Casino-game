@@ -9,7 +9,6 @@ body {
     background-image: url("bg.jpg");
     color: rgb(180, 120, 8);
     font-family: 'Poppins';
-    font-size: 1.5rem;
     position: relative;
     width: 100%;
 }
@@ -65,7 +64,7 @@ button:hover {
 
 .title {
     text-align: center;
-    font-size: 1.65rem;
+    font-size: 1.55rem;
     font-weight: 600;
 }
 .section1 {
@@ -76,10 +75,12 @@ button:hover {
     top:50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    font-size: 1.5rem;
+    display: none;
 }
 
 .active {
-    display: block;
+    display: inline;
 }
 .container{
     background-color: rgba(0, 0, 0, 0.441);

@@ -6,10 +6,11 @@ var firstCard;
 var secondCard, sum, choice;
 const b1 = document.querySelector('.btn-1');
 const rules = document.querySelector('.rules');
-const
+const sec = document.querySelector('.section1');
 
 b1.addEventListener('click', ()=> {
-
+    rules.classList.toggle('inactive');
+    sec.classList.toggle('active');
 });
 
 function newTake()
