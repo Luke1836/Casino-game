@@ -4,6 +4,11 @@ const card = document.getElementById("operators");
 const sumElement = document.getElementById("sum");
 var firstCard;
 var secondCard, sum, choice;
+const b1 = document.querySelector('.btn-1');
+
+b1.addEventListener('click', ()=> {
+
+});
 
 function newTake()
 {

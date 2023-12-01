@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,34 +6,30 @@
 }
 
 body {
-    background-image: url("pngtree-classy-luxury-casino-game-background-image_774371.jpg");
+    background-image: url("bg.jpg");
     color: rgb(180, 120, 8);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 600;
+    font-family: 'Poppins';
     font-size: 16px;
     position: relative;
     width: 100%;
 }
 
 .header {
-    height: 10vh;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(
-        to right,
-        #846501 0%,
-        #d69729 33%,
-        #c5992c 67%,
-        #846501 100%
-    );
     border-bottom: solid 4px rgb(64, 48, 31);
-    color: darkcyan;
+    color: rgb(233, 208, 22);
+    font-family: 'Bebas Neue';
+    font-size: 2.5rem;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
 }
 
 button {
-    font-weight: bold;
-    color: white;
+    font-weight: 500;
     width: 200px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -41,33 +37,59 @@ button {
     margin-bottom: 5px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: rgba(119, 56, 0, 0.9);
+    background: transparent;
+    backdrop-filter: blur(8px);
     color: rgb(209, 244, 244);
     transition-property: all;
     transition-duration: .5s;
-    
 }
 
 button:hover {
     background-color: #c5992c;
     border: solid 2px #947719;
 }
+
+/* Utiltiy Classes */
+.underline {
+    height: 0.3rem;
+    width: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background: white;
+}
+/* End of Utility classes */
+
+.title {
+    text-align: center;
+    font-size: 1.65rem;
+    font-weight: 600;
+}
 .section1 {
     text-align: center;
     line-height: 30px;
     margin-top: 7vh;
     width: 100%;
+    display: none;
 }
 
 .container{
     background-color: rgba(0, 0, 0, 0.441);
+    width: 100%;
+    height: 100vh;
 }
 
 .rules {
     text-align: left;
     margin-left: 4rem;
-    color: rgb(244, 255, 29);
+    color: rgb(251, 251, 250);
     width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.441);
 }
 
 .summary1 {
@@ -81,13 +103,7 @@ a:link {
 
 .footer {
     position: absolute;
-    background-image: linear-gradient(
-        to right,
-        #8466019e 0%,
-        #d69729ad 33%,
-        #c59a2cae 67%,
-        #846601be 100% 
-    );
+    display: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 100%;
@@ -99,6 +115,7 @@ a:link {
     flex-direction: column;
     color: black;
     border: solid 2px rgba(50, 44, 12, 0.508);
+    display: none;
 }
 
 #result {
@@ -107,6 +124,16 @@ a:link {
     color: rgb(253, 200, 65)
 }
 
+.inactive {
+    display: block;
+}
+
+.btn-1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.75rem;
+}
 ::-webkit-scrollbar {
     width: 10px;
   }
