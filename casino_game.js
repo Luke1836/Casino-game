@@ -10,6 +10,12 @@ const sec = document.querySelector('.section1');
 const cardBody = document.querySelector('.card');
 let arr= [];
 const close = document.querySelector('.close');
+const closeRules = document.querySelector('.close_rules');
+
+closeRules.addEventListener('click', () => {
+    rules.classList.add('inactive');
+    sec.classList.add('active');
+});
 
 close.addEventListener('click', ()=> {
     cardBody.classList.toggle('inactive');
@@ -17,10 +23,9 @@ close.addEventListener('click', ()=> {
 });
 
 b1.addEventListener('click', ()=> {
-    rules.classList.toggle('inactive');
-    sec.classList.toggle('active');
+    rules.classList.remove('inactive');
+    sec.classList.remove('active');
 });
-
 
 function newTake()
 {

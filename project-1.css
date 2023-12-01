@@ -104,7 +104,7 @@ button:hover {
     background: white;
 }
 
-.close {
+.close, .close_rules {
     position: absolute;
     right: 26px;
     top: 14px;
