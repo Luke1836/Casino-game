@@ -49,14 +49,16 @@ function newTake()
     console.log(firstCard + "    " + secondCard);
     if(firstCard > 10 || secondCard > 10)
     {
-        card.textContent = "Cards are not valid.";
-        
+        card.classList.remove('active');
+        result.classList.remove('inactive');
+        result.textContent += "Cards are not valid";
         exit(0);
     }
     if(firstCard === 1)
         firstCard = 11;
     if(secondCard === 1)
         secondCard = 11;
+    sumElement.classList.remove('inactive');
     sum = firstCard + secondCard;
     sumElement.textContent += sum;
     card.textContent = firstCard + "  " + secondCard;
@@ -92,10 +94,12 @@ function game()
 
 function reset()
 {
-    result.textContent = "Result: ";
+    result.classList.add('inactive');
+    sumElement.classList.add('inactive');
     firstCard = 0;
     secondCard = 0;
     sum = 0;
+    result.textContent = "Result: ";
     card.textContent = "Numbers: ";
     sumElement.textContent = "Sum: ";
 }
