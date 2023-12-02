@@ -7,7 +7,7 @@
 
 body {
     background-image: url("bg.jpg");
-    color: rgb(180, 120, 8);
+    color: rgb(233, 208, 22);
     font-family: 'Poppins';
     position: relative;
     width: 100%;
@@ -53,8 +53,8 @@ button:hover {
 }
 /* Card styles */
 .card {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,6 +93,9 @@ button:hover {
     border: solid 5px #0f493b;
     font-weight: 600;
 }
+
+
+/* END OF THE CARD CLASSES */
 /* Utiltiy Classes */
 .underline {
     height: 0.3rem;
@@ -112,6 +115,7 @@ button:hover {
     width: 20px;
     height: 20px;
 }
+
 /* End of Utility classes */
 
 .title {

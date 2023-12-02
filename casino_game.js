@@ -75,16 +75,12 @@ function game()
     if(sum < 21)
     {
         result.textContent += "You are still in the game. Press to continue";
-        choice = prompt("Do you want to draw a new pair of cards? (Y/N)");
-        if(choice.toUpperCase() == 'Y')
-            newTake();
-        else
-            result.textContent = "Sorry but you lose. Thank you for playing!";
-
+        
+        newTake();
     }
     else if(sum == 21)
     {
-        result.textContent = "Congratulations!! You have pulled a Black Jack";
+        result.textContent = "Congratulations!!! You have pulled a Black Jack";
     }
     else
     {
