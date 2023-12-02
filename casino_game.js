@@ -39,6 +39,9 @@ function newTake()
         console.log(firstCard + "    " + secondCard);
         arr.push(firstCard);
         arr.push(secondCard);
+        console.log(arr[0] + "  " + arr[1]);
+        document.getElementById('number1').value = "";
+        document.getElementById('number2').value = "";
         sec.classList.toggle('active');
         cardBody.classList.toggle('inactive');
         return arr;
