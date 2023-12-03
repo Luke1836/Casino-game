@@ -11,6 +11,21 @@ const cardBody = document.querySelector('.card');
 let arr= [];
 const close = document.querySelector('.close');
 const closeRules = document.querySelector('.close_rules');
+const boardBtn = document.getElementById('board-btn');
+const board = document.querySelector('.hero-1');
+const closeBoard = document.querySelector('.close_board');
+
+boardBtn.addEventListener('click', () => {
+    board.classList.remove('inactive');
+    b1.classList.add('inactive');
+    sec.classList.remove('active');
+});
+
+closeBoard.addEventListener('click', () => {
+    board.classList.add('inactive');
+    b1.classList.remove('inactive');
+    sec.classList.add('active');
+});
 
 closeRules.addEventListener('click', () => {
     rules.classList.add('inactive');

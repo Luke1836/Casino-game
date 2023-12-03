@@ -53,15 +53,24 @@
                 <!-- Choice Pop-up -->
                 <div class="card inactive">
                     <div class="hero-2">
+                        <span class="close"><i class="fa-solid fa-x" style="color: #ece522;"></i></span>
                         <input class="numbers" type="text" placeholder="Enter your choice (Y/N)" autocomplete="off">
                     </div>
                 </div>
+
+                <!-- Board-->
+                <div class="hero-1 inactive">
+                    <span class="close_board"><i class="fa-solid fa-x" style="color: #ece522;"></i></span>
+                    <img src="casino board.jpg" alt="Casino board" class="img-1">
+                </div>
+
             <article class="section1 active">
                 <p id="operators" class="operators active">Numbers: </p>
                 <p id="sum" class="sum inactive">SUM: </p>
                 <p id="result" class="result inactive">Result: </p>
                 <div class="operands">
                     <button id="play" onclick="newTake()">Let's Play</button>
+                    <button id="board-btn">Board</button>
                     <button id="play1" onclick="game()">Roll it!</button>
                     <button id="random" onclick="randomNumber()">Generate Numbers</button>
                     <button id="reset" onclick="reset()">RESET</button>
