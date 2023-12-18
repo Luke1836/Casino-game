@@ -48,7 +48,6 @@ function newTake()
     cardBody.classList.toggle('inactive');
     const saveBtn = document.getElementById('save-btn');
     saveBtn.addEventListener('click', ()=> {
-        console.log("Hello");
         firstCard = document.getElementById('number1').value;
         secondCard = document.getElementById('number2').value;
         console.log(firstCard + "    " + secondCard);
@@ -59,13 +58,30 @@ function newTake()
         document.getElementById('number2').value = "";
         sec.classList.toggle('active');
         cardBody.classList.toggle('inactive');
-        return arr;
+
+        if(firstCard > 10 || secondCard > 10)
+        {
+            card.classList.remove('active');
+            result.classList.remove('inactive');
+            result.textContent += "Cards are not valid";
+            exit(0);
+        }
+        if(firstCard === 1)
+            firstCard = 11;
+        if(secondCard === 1)
+            secondCard = 11;
+        sumElement.classList.remove('inactive');
+        sum = firstCard + secondCard;
+        sumElement.textContent += sum;
+        card.textContent = firstCard + "  " + secondCard;
+        if(choice.toUpperCase() == 'Y')
+            {
+                sumElement.textContent = "Sum: " + sum;
+                game();
+            }
     });
-    
-    firstCard = arr[0];
-    secondCard = arr[1];
-    console.log(firstCard + "    " + secondCard);
-    if(firstCard > 10 || secondCard > 10)
+
+/*     if(firstCard > 10 || secondCard > 10)
     {
         card.classList.remove('active');
         result.classList.remove('inactive');
@@ -84,7 +100,7 @@ function newTake()
         {
             sumElement.textContent = "Sum: " + sum;
             game();
-        }
+        } */
     
 }
 
