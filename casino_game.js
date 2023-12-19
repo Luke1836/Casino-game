@@ -1,4 +1,4 @@
-
+const btnDiv = document.querySelector('.operands');
 const result = document.getElementById("result");
 const card = document.getElementById("operators"); 
 const sumElement = document.getElementById("sum");
@@ -15,12 +15,7 @@ const boardBtn = document.getElementById('board-btn');
 const board = document.querySelector('.hero-1');
 const closeBoard = document.querySelector('.close_board');
 
-boardBtn.addEventListener('click', () => {
-    board.classList.remove('inactive');
-    b1.classList.add('inactive');
-    sec.classList.remove('active');
-});
-
+//Closing the board after displaying the results
 closeBoard.addEventListener('click', () => {
     board.classList.add('inactive');
     b1.classList.remove('inactive');
@@ -85,12 +80,14 @@ function newTake()
         card.textContent = firstCard + "  " + secondCard;
 
         if(sum < 21 && sum > 10)
-            {
-                alert("You are still in the game. Press to continue");
+            {            
                 newTake();
             }
         else if(sum == 21)
             {
+                board.classList.remove('inactive');
+                b1.classList.add('inactive');
+                btnDiv.classList.remove('active');
                 result.classList.remove("inactive");
                 result.textContent = "Congratulations!!! You have pulled a Black Jack";
             }
@@ -102,11 +99,6 @@ function newTake()
     });    
     
 }
-/* if(choice.toUpperCase() == 'Y')
-            {
-                sumElement.textContent = "Sum: " + sum;
-                game();
-            } */
 
 function reset()
 {
