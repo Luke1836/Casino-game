@@ -83,20 +83,24 @@ function newTake()
         sum = firstCard + secondCard;
         sumElement.textContent += sum;
         card.textContent = firstCard + "  " + secondCard;
-        if(sum < 21)
+
+        if(sum < 21 && sum > 10)
             {
                 alert("You are still in the game. Press to continue");
                 newTake();
             }
         else if(sum == 21)
             {
+                result.classList.remove("inactive");
                 result.textContent = "Congratulations!!! You have pulled a Black Jack";
             }
         else
             {
+                result.classList.remove("inactive");
                 result.textContent = "Unfortunately, you have lost the game.\nBetter Luck next time";
             }
     });    
+    
 }
 /* if(choice.toUpperCase() == 'Y')
             {

@@ -232,6 +232,7 @@ a:link {
     font-size: 1.75rem;
     backdrop-filter: blur(8px);
 }
+
 ::-webkit-scrollbar {
     width: 10px;
   }
