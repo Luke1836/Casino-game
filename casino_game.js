@@ -1,4 +1,4 @@
-const btnDiv = document.querySelector('.operands');
+const btnDiv = document.querySelector('#operands');
 const result = document.getElementById("result");
 const card = document.getElementById("operators"); 
 const sumElement = document.getElementById("sum");
@@ -20,6 +20,13 @@ closeBoard.addEventListener('click', () => {
     board.classList.add('inactive');
     b1.classList.remove('inactive');
     sec.classList.add('active');
+    btnDiv.classList.remove('inactive');
+    result.textContent = "Result:";
+    card.textContent = "Numbers: ";
+    sumElement.textContent = "Sum: ";
+    result.classList.add("inactive");
+    sumElement.classList.add("inactive");
+    firstCard = secondCard = sum = null;
 });
 
 closeRules.addEventListener('click', () => {
@@ -87,7 +94,7 @@ function newTake()
             {
                 board.classList.remove('inactive');
                 b1.classList.add('inactive');
-                btnDiv.classList.remove('active');
+                btnDiv.classList.add('inactive');
                 result.classList.remove("inactive");
                 result.textContent = "Congratulations!!! You have pulled a Black Jack";
             }
@@ -97,7 +104,6 @@ function newTake()
                 result.textContent = "Unfortunately, you have lost the game.\nBetter Luck next time";
             }
     });    
-    
 }
 
 function reset()
