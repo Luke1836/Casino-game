@@ -44,12 +44,21 @@ b1.addEventListener('click', ()=> {
 
 function newTake()
 {
+    if(firstCard !== null && secondCard !== null && sum !==null)
+    {
+        firstCard=secondCard=sum=null;
+        result.textContent = "Result: ";
+        sumElement.textContent = "Sum: ";
+        card.textContent = "Numbers: ";
+
+    }
+
     sec.classList.toggle('active');
     cardBody.classList.toggle('inactive');
     const saveBtn = document.getElementById('save-btn');
     saveBtn.addEventListener('click', ()=> {
-        firstCard = document.getElementById('number1').value;
-        secondCard = document.getElementById('number2').value;
+        firstCard = parseInt(document.getElementById('number1').value, 10);
+        secondCard = parseInt(document.getElementById('number2').value, 10);
         console.log(firstCard + "    " + secondCard);
         arr.push(firstCard);
         arr.push(secondCard);
@@ -74,53 +83,26 @@ function newTake()
         sum = firstCard + secondCard;
         sumElement.textContent += sum;
         card.textContent = firstCard + "  " + secondCard;
-        if(choice.toUpperCase() == 'Y')
+        if(sum < 21)
+            {
+                alert("You are still in the game. Press to continue");
+                newTake();
+            }
+        else if(sum == 21)
+            {
+                result.textContent = "Congratulations!!! You have pulled a Black Jack";
+            }
+        else
+            {
+                result.textContent = "Unfortunately, you have lost the game.\nBetter Luck next time";
+            }
+    });    
+}
+/* if(choice.toUpperCase() == 'Y')
             {
                 sumElement.textContent = "Sum: " + sum;
                 game();
-            }
-    });
-
-/*     if(firstCard > 10 || secondCard > 10)
-    {
-        card.classList.remove('active');
-        result.classList.remove('inactive');
-        result.textContent += "Cards are not valid";
-        exit(0);
-    }
-    if(firstCard === 1)
-        firstCard = 11;
-    if(secondCard === 1)
-        secondCard = 11;
-    sumElement.classList.remove('inactive');
-    sum = firstCard + secondCard;
-    sumElement.textContent += sum;
-    card.textContent = firstCard + "  " + secondCard;
-    if(choice.toUpperCase() == 'Y')
-        {
-            sumElement.textContent = "Sum: " + sum;
-            game();
-        } */
-    
-}
-
-function game()
-{
-    if(sum < 21)
-    {
-        result.textContent += "You are still in the game. Press to continue";
-        
-        newTake();
-    }
-    else if(sum == 21)
-    {
-        result.textContent = "Congratulations!!! You have pulled a Black Jack";
-    }
-    else
-    {
-        result.textContent = "Unfortunately, you have lost the game.\nBetter Luck next time";
-    }
-}
+            } */
 
 function reset()
 {
