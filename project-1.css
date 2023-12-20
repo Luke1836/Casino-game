@@ -56,6 +56,7 @@ button:hover {
     border: solid 3px whitesmoke;
     color: #26b18e;
 }
+
 /* Card styles */
 .card {
     width: 100%;
@@ -64,6 +65,7 @@ button:hover {
     align-items: center;
     justify-content: center;
 }
+
 .hero-2 {
     width: 50%;
     background-color: #0f493b;
@@ -79,6 +81,7 @@ button:hover {
     border-bottom-right-radius: 15px;
     position: relative;
 }
+
 .card input {
     width: 35vw;
     height: 5vh;
@@ -86,18 +89,21 @@ button:hover {
     font-size: 1.25rem;
     color: black;
 }
+
 .save-btn {
     border: solid 3px whitesmoke;
     margin: 0;
     width: 100px;
     border-radius: 30px;
 }
+
 .save-btn:hover {
     background-color: whitesmoke;
     color: #0f493b;
     border: solid 5px #0f493b;
     font-weight: 600;
 }
+
 /* END OF THE CARD CLASSES */
 
 /* Utiltiy Classes */
@@ -127,6 +133,10 @@ button:hover {
     cursor: pointer;
 }
 /* End of Utility classes */
+
+.rules {
+    list-style-position: inside;
+}
 
 .hero-1 {
     position: absolute;
