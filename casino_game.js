@@ -2,12 +2,14 @@ const btnDiv = document.querySelector('#operands');
 const result = document.getElementById("result");
 const card = document.getElementById("operators"); 
 const sumElement = document.getElementById("sum");
+const choiceCard = document.getElementById('choice');
 var firstCard;
 var secondCard, sum, choice;
 const b1 = document.querySelector('.btn-1');
 const rules = document.querySelector('.rules');
 const sec = document.querySelector('.section1');
 const cardBody = document.querySelector('.card');
+const choiceNum = document.querySelector('.numbers');
 let arr= [];
 const close = document.querySelector('.close');
 const closeRules = document.querySelector('.close_rules');
@@ -88,7 +90,7 @@ function newTake()
 
         if(sum < 21 && sum > 10)
             {            
-                newTake();
+                matchPoint();
             }
         else if(sum == 21)
             {
@@ -118,8 +120,20 @@ function reset()
     sumElement.textContent = "Sum: ";
 }
 
+function matchPoint()
+{
+    choiceCard.classList.remove('inactive');
+    choice = choiceNum.value;
+        if(choice.toUpperCase() == 'Y')
+            newTake();
+        else    
+        {
+            result.classList.remove('inactive');
+            result.textContent = "Unfortunately, you have lost the game\nBetter luck nextTime";
+        }
+}
 
-function randomNumber()
+/* function randomNumber()
 {
     firstCard = Math.floor(Math.random() * 10) + 2;
     secondCard = Math.floor(Math.random() * 10) + 2;
@@ -132,4 +146,4 @@ function randomNumber()
             sumElement.textContent = "Sum: " + sum;
             game();
         }
-}
+} */
